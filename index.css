@@ -1,0 +1,335 @@
+body {
+  background-image: url(fundo-02.png);
+  background-size: cover; /* Modificação aqui */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  background-color: #000;
+}
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  li {
+    list-style: none;
+    color: #1F82BF;
+  }
+  
+  #links {
+    display: flex;
+    padding-left: 0;
+  }
+
+  .video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+
+  #links li a {
+    display: block;
+    text-decoration: none;
+    padding: 9px 12px;
+    white-space: nowrap;
+    color: #fff;
+  }
+  
+  .logo {
+    width: 55vw;
+  }
+  
+  .logo img {
+    width: 10%;
+    height: 10%;
+    max-width: 300px;
+  }
+  
+  #links li a:hover {
+    background-color: #1F82BF;
+  }
+  
+  #header {
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 75px;
+    max-height: 411px;
+    background-color: #1F82BF;
+    opacity: 60%;
+    z-index: 500;
+
+  }
+  
+  .container {
+    margin-top: 70px;
+    width: 100%;
+  }
+  
+  
+  .content {
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+  }
+  
+  .content h2 {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  /* hacky solution for section alignment with header, # links*/
+  .content h2::before {
+    display: block;
+    content: " ";
+    margin-top: -80px;
+    height: 80px;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  
+  #hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    margin-top: 0;
+  }
+  
+  #hero p {
+    margin: 1em 15px 1em 15px;
+  }
+  
+  .responsive {
+    max-width: 100%;
+    height: auto;
+    margin: 10px;
+  }
+  
+  #form {
+    display: block;
+  }
+  
+  #email {
+    width: 100%;
+    padding: 5px;
+    max-width: 270px;
+    line-height: 1.5;
+    box-sizing: border-box;
+  }
+  
+  .button {
+    padding: 14px 16px;
+    margin: 10px 0;
+    font-size: 14px;
+    top: 0;
+    position: relative;
+    border: none;
+    background-color: #00979d;
+    box-shadow: 0 4px #005c5f;
+    color: #fff;
+  }
+  
+  .button:hover {
+    top: 2px;
+    box-shadow: 0 2px #005c5f;
+    background-color: #00979d;
+    color: #fff;
+  }
+  
+  #tech {
+    margin-bottom: 10px;
+  }
+  
+  #tech table {
+    width: 90%;
+    border: 3px solid #D91E2E;
+    margin: 0 auto;
+  }
+  
+  #tech table td {
+    padding: 5px;
+  }
+  
+  #tech table tr:nth-child(even) {
+    background-color: #f1f1f1;
+  }
+  
+  
+  #video {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  
+  #pricing-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .price-box {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #00979d;
+    margin: 15px;
+    width: calc(100% / 2);
+    text-align: center;
+  }
+  
+  .price-box a {
+    margin-top: auto;
+    margin-bottom: 3px;
+    text-decoration: none;
+  }
+  
+  .box-title {
+    color: #f1c40f;
+    border-bottom: 3px solid #f1c40f;
+    padding: 10px 0;
+  }
+  
+  .content-footer {
+    width: 100%;
+    max-width: 1000px;
+    height: 100px;
+    margin: 0 auto;
+    background-color: #f7f8f9;
+    display: flex;
+    padding: 15px;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+  
+  .content-footer ul {
+    display: flex;
+    align-self: flex-end;
+    padding: 0;
+  }
+  
+  .content-footer li a {
+    display: block;
+    text-decoration: none;
+    padding-left: 12px;
+    white-space: nowrap;
+    color: #000;
+  }
+  
+  .content-footer span {
+    align-self: flex-end;
+  }
+  
+  .content-footer li a:hover {
+    color: red;
+  }
+  
+  @media (max-width: 650px) {
+    body {
+      font-size: 110%;
+    }
+    #links {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0 50px;
+      width: 100%;
+    }
+  
+    #nav-bar {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .logo {
+      width: 100%;
+      position: relative;
+      margin-top: 15px;
+    }
+  
+    #header-img {
+      margin: 0 auto;
+    }
+  
+    #hero {
+      margin-top: 290px;
+    }
+  
+    #pricing-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .price-box {
+      width: 100%;
+      max-width: 290px;
+    }
+  
+    .content-footer {
+      height: 235px;
+    }
+  
+    .content-footer ul {
+      flex-direction: column;
+      align-self: center;
+      justify-content: flex-end;
+      text-align: center;
+    }
+  
+    .content-footer li a {
+      padding-left: 0;
+      padding-top: 10px;
+    }
+  
+    .content-footer span {
+      align-self: center;
+    }
+  
+    .content h2::before {
+      margin-top: -320px;
+      height: 320px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    #header {
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  p{
+color: #ffffff;
+  }
+  
+  h1{
+    color: #ffffff;
+    margin-top: 15%;
+  }
+
+  h2{
+    color: #ffffff;
+  }
+
+  .a{
+    color: #fff;
+  }
+
+  .git{
+    text-align: center;
+    align-items: center;
+  }
+
